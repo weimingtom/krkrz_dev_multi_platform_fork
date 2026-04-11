@@ -1,0 +1,36 @@
+[submodule "external/baseclasses"]
+	path = external/baseclasses
+	url = https://github.com/krkrz/baseclasses.git
+[submodule "external/freetype"]
+	path = external/freetype
+	url = https://github.com/krkrz/freetype.git
+[submodule "external/libjpeg-turbo"]
+	path = external/libjpeg-turbo
+	url = https://github.com/krkrz/libjpeg-turbo.git
+[submodule "external/lpng"]
+	path = external/lpng
+	url = https://github.com/krkrz/libpng.git
+[submodule "external/onig"]
+	path = external/onig
+	url = https://github.com/krkrz/oniguruma.git
+[submodule "external/zlib"]
+	path = external/zlib
+	url = https://github.com/krkrz/zlib.git
+[submodule "external/jxrlib"]
+	path = external/jxrlib
+	url = https://github.com/krkrz/jxrlib.git
+[submodule "external/angle"]
+	path = external/angle
+	url = https://github.com/krkrz/angle.git
+[submodule "external/libogg"]
+	path = external/libogg
+	url = https://github.com/krkrz/libogg.git
+[submodule "external/opus"]
+	path = external/opus
+	url = https://github.com/krkrz/opus.git
+[submodule "external/opusfile"]
+	path = external/opusfile
+	url = https://github.com/krkrz/opusfile.git
+[submodule "external/glm"]
+	path = external/glm
+	url = https://github.com/krkrz/glm.git

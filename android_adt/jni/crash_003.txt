@@ -1,0 +1,86 @@
+D:\work_krkrz\krkrz_dev_multi_platform\visual\opengl\CanvasIntf.cpp
+
+
+tjs_error TJS_INTF_METHOD tTJSNI_Canvas::Construct(tjs_int numparams, tTJSVariant **param, iTJSDispatch2 *tjs_obj) {
+int *p = 0;
+(*p) = 0;	
+TVPAddLog(TJS_W("tTJSNI_Canvas::Construct:"));
+
+
+
+------
+
+
+04-06 14:17:33.181 27451 27451 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+04-06 14:17:33.181 27451 27451 F DEBUG   : Build fingerprint: 'Redmi/earth/earth:12/SP1A.210812.016/V13.0.10.0.SCVCNXM:user/release-keys'
+04-06 14:17:33.181 27451 27451 F DEBUG   : Revision: '0'
+04-06 14:17:33.181 27451 27451 F DEBUG   : ABI: 'arm'
+04-06 14:17:33.181 27451 27451 F DEBUG   : Timestamp: 2025-04-06 14:17:32.708181065+0800
+04-06 14:17:33.181 27451 27451 F DEBUG   : Process uptime: 0s
+04-06 14:17:33.181 27451 27451 F DEBUG   : Cmdline: jp.kirikiri.krkrz
+04-06 14:17:33.181 27451 27451 F DEBUG   : pid: 27354, tid: 27440, name: Thread-5  >>> jp.kirikiri.krkrz <<<
+04-06 14:17:33.181 27451 27451 F DEBUG   : uid: 10352
+04-06 14:17:33.181 27451 27451 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
+04-06 14:17:33.181 27451 27451 F DEBUG   : Cause: null pointer dereference
+04-06 14:17:33.181 27451 27451 F DEBUG   :     r0  d221bf00  r1  00000001  r2  00000000  r3  00000000
+04-06 14:17:33.181 27451 27451 F DEBUG   :     r4  bd7154f4  r5  bdcbcb28  r6  bdcbcb28  r7  00000078
+04-06 14:17:33.181 27451 27451 F DEBUG   :     r8  00006ada  r9  efc1e274  r10 ff8cc6e8  r11 d7aee2cc
+04-06 14:17:33.181 27451 27451 F DEBUG   :     ip  bd929478  sp  d7aee298  lr  bd92dc38  pc  bd9294ac
+04-06 14:17:33.181 27451 27451 F DEBUG   : backtrace:
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #00 pc 0049e4ac  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (tTJSNI_Canvas::Construct(int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+52)
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #01 pc 004a2c34  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #02 pc 00289828  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSNativeClassConstructor::FuncCall(unsigned int, char16_t const*,unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+148)
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #03 pc 0028ee1c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::TJSDefaultFuncCall(unsigned int, TJS::tTJSVariant&, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+196)
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #04 pc 0028eff0  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSCustomObject::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+312)
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #05 pc 0028a57c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSNativeClass::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+136)
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #06 pc 0028a98c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSNativeClass::CreateNew(unsigned int, char16_t const*, unsigned int*, TJS::iTJSDispatch2**, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+604)
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #07 pc 00462f40  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (tTJSNI_BaseWindow::CreateCanvas(TJS::iTJSDispatch2*)+188)
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #08 pc 0047b7bc  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (tTJSNI_Window::Construct(int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+148)
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #09 pc 00468740  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so
+04-06 14:17:33.181 27451 27451 F DEBUG   :       #10 pc 00289828  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSNativeClassConstructor::FuncCall(unsigned int, char16_t const*,unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+148)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #11 pc 0028ee1c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::TJSDefaultFuncCall(unsigned int, TJS::tTJSVariant&, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+196)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #12 pc 0028eff0  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSCustomObject::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+312)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #13 pc 0028a57c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSNativeClass::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+136)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #14 pc 001e46f8  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSVariantClosure::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) const+176)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #15 pc 00258e34  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::CallFunctionDirect(TJS::tTJSVariant*, int const*, TJS::tTJSVariant**, int)+2012)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #16 pc 00254d40  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::ExecuteCode(TJS::tTJSVariant*, int, TJS::tTJSVariant**, int, TJS::tTJSVariant*)+5856)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #17 pc 00252cf4  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::ExecuteAsFunction(TJS::iTJSDispatch2*, TJS::tTJSVariant**, int, TJS::tTJSVariant*, int)+1188)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #18 pc 0025c0e4  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+256)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #19 pc 0028ee1c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::TJSDefaultFuncCall(unsigned int, TJS::tTJSVariant&, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+196)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #20 pc 0028eff0  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSCustomObject::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+312)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #21 pc 0025c158  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+372)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #22 pc 0025ca88  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::CreateNew(unsigned int, char16_t const*, unsigned int*, TJS::iTJSDispatch2**, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+248)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #23 pc 002498d8  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSVariantClosure::CreateNew(unsigned int, char16_t const*, unsigned int*, TJS::iTJSDispatch2**, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) const+176)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #24 pc 00258400  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::CallFunction(TJS::tTJSVariant*, int const*, TJS::tTJSVariant**, int)+1736)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #25 pc 00254d08  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::ExecuteCode(TJS::tTJSVariant*, int, TJS::tTJSVariant**, int, TJS::tTJSVariant*)+5800)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #26 pc 00252cf4  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::ExecuteAsFunction(TJS::iTJSDispatch2*, TJS::tTJSVariant**, int, TJS::tTJSVariant*, int)+1188)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #27 pc 0025c0bc  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+216)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #28 pc 002a6da0  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSScriptBlock::ExecuteTopLevelScript(TJS::tTJSVariant*, TJS::iTJSDispatch2*)+116)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #29 pc 002a691c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSScriptBlock::SetText(TJS::tTJSVariant*, char16_t const*, TJS::iTJSDispatch2*, bool)+572)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #30 pc 002b0a70  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSScriptCache::ExecScript(TJS::tTJSString const&, TJS::tTJSVariant*, TJS::iTJSDispatch2*, TJS::tTJSString const*, int)+144)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #31 pc 001dd5d8  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJS::ExecScript(TJS::tTJSString const&, TJS::tTJSVariant*, TJS::iTJSDispatch2*, TJS::tTJSString const*, int)+88)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #32 pc 002d16c8  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TVPExecuteStorage(TJS::tTJSString const&, TJS::iTJSDispatch2*, TJS::tTJSVariant*, bool, char16_t const*)+688)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #33 pc 002d3c88  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #34 pc 00289714  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSNativeClassMethod::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+172)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #35 pc 0028ee1c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::TJSDefaultFuncCall(unsigned int, TJS::tTJSVariant&, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+196)
+04-06 14:17:33.182 27451 27451 F DEBUG   :       #36 pc 0028eff0  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSCustomObject::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+312)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #37 pc 0028a57c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSNativeClass::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+136)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #38 pc 001e46f8  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSVariantClosure::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*) const+176)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #39 pc 00258e34  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::CallFunctionDirect(TJS::tTJSVariant*, int const*, TJS::tTJSVariant**, int)+2012)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #40 pc 00254d40  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::ExecuteCode(TJS::tTJSVariant*, int, TJS::tTJSVariant**, int, TJS::tTJSVariant*)+5856)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #41 pc 00252cf4  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::ExecuteAsFunction(TJS::iTJSDispatch2*, TJS::tTJSVariant**, int, TJS::tTJSVariant*, int)+1188)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #42 pc 0025c0bc  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSInterCodeContext::FuncCall(unsigned int, char16_t const*, unsigned int*, TJS::tTJSVariant*, int, TJS::tTJSVariant**, TJS::iTJSDispatch2*)+216)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #43 pc 002a6da0  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSScriptBlock::ExecuteTopLevelScript(TJS::tTJSVariant*, TJS::iTJSDispatch2*)+116)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #44 pc 002a691c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSScriptBlock::SetText(TJS::tTJSVariant*, char16_t const*, TJS::iTJSDispatch2*, bool)+572)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #45 pc 002b0a70  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJSScriptCache::ExecScript(TJS::tTJSString const&, TJS::tTJSVariant*, TJS::iTJSDispatch2*, TJS::tTJSString const*, int)+144)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #46 pc 001dd5d8  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TJS::tTJS::ExecScript(TJS::tTJSString const&, TJS::tTJSVariant*, TJS::iTJSDispatch2*, TJS::tTJSString const*, int)+88)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #47 pc 002d16c8  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TVPExecuteStorage(TJS::tTJSString const&, TJS::iTJSDispatch2*, TJS::tTJSVariant*, bool, char16_t const*)+688)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #48 pc 002d140c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TVPExecuteStorage(TJS::tTJSString const&, TJS::tTJSVariant*, bool, char16_t const*)+56)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #49 pc 002d1da4  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TVPExecuteStartupScript()+116)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #50 pc 002d3a7c  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (TVPInitializeStartupScript()+20)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #51 pc 00317e88  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (tTVPApplication::appDispatch(NativeEvent&)+36)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #52 pc 00317c50  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (tTVPApplication::mainLoop()+456)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #53 pc 003181f8  /data/app/~~QfpTSTt792xc5TxgVTsE5g==/jp.kirikiri.krkrz-IVlYsL1G-GBBu3G1JOMRpA==/lib/arm/libkrkrz.so (tTVPApplication::startMainLoopCallback(void*)+28)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #54 pc 000a8d57  /apex/com.android.runtime/lib/bionic/libc.so (__pthread_start(void*)+40) (BuildId: 026d5e3e69b3053fe3ecd0ad2aded77b)
+04-06 14:17:33.183 27451 27451 F DEBUG   :       #55 pc 00061f25  /apex/com.android.runtime/lib/bionic/libc.so (__start_thread+30) (BuildId: 026d5e3e69b3053fe3ecd0ad2aded77b)
+

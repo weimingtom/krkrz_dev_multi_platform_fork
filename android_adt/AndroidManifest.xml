@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.kirikiri.krkrz"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:installLocation="auto"
+    >
+
+   	<!-- 
+    https://www.mobibrw.com/2015/2323
+    minSdkVersion must same as APP_PLATFORM := android-19
+    otherwise echo: ERROR: Non-debuggable application installed on the target device. Please re-install the debuggable version!
+     -->
+    <uses-sdk android:minSdkVersion="21"
+	      android:targetSdkVersion="23" 
+	      />
+    
+    <application
+        android:name="jp.kirikiri.krkrz.KrkrzApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        
+        <!-- .MainActivity -->
+        <!-- .MainActivityDevelop -->
+        <activity android:name=".MainActivity"
+            android:launchMode="singleInstance"
+            android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

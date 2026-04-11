@@ -1,0 +1,66 @@
+
+class GameScreen extends ScreenController {
+
+	var message_:MessageTexture;
+	var images_:Array;
+	// var mesh_:Mesh;
+
+	function GameScreen( owner:CanvasWindow, width:int, height:int ) {
+		super.ScreenController( owner, width, height );
+		images_ = new Array();
+	}
+
+	function initializeGame() {
+		// OpenGL は上下反転(左下原点)なので、反転オプションを有効に
+		owner_.canvas.defaultShader.a_vertReverse = true;
+		owner_.canvas.defaultShader.a_opacity = 1.0;
+		owner_.canvas.defaultFillShader.a_vertReverse = true;
+
+		// 何となく4個にしておく
+		for( var i = 0; i < 4; i++ ) {
+			var img = new ImageNode();
+			images_.add( img );
+			nodes_.add( img );
+		}
+		// 余白やマージンを切り詰めた方が効率的
+		message_ = new MessageTexture( width_-32-20, height_/2-32-20 );
+		message_.x = 16;
+		message_.y = 16 + height_/2;
+		nodes_.add( message_ );
+
+		// mesh_ = new Mesh();
+		// mesh_.addRange( new Texture("rooftop.jpg"), new Rect(100,100,600,800), new Rect(10,800,400,1000) );
+	}
+
+	function onNodeDraw( canvas:Canvas ) {
+		var count = nodes_.count;
+		for( var i = 0; i < count; i++ ) {
+			nodes_[i].draw( canvas );
+		}
+
+		/*
+		canvas.save();
+		canvas.matrix.reset();
+		mesh_.draw( canvas );
+		canvas.restore();
+		*/
+	}
+	function putText( text, color ) {
+		message_.putText( text, color );
+	}
+	function clearMessage() {
+		message_.clear();
+	}
+	function processReturn() {
+		message_.processReturn();
+	}
+	function showLineBreak() {
+		message_.showLineBreak();
+	}
+	function showPageBreak() {
+		message_.showPageBreak();
+	}
+	function setMessageVisible( v:bool ) {
+		message_.visible = v;
+	}
+};

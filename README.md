@@ -1,6 +1,9 @@
 # krkrz_dev_multi_platform_fork
 [Very WIP and NOT RECOMMENDED] My krkrz dev_multi_platform branch fork for Android
 
+## References  
+* https://github.com/krkrz/krkrz/tree/3d89b0f203ceca840f62b2e28ad034dea6df41fa
+
 # Original README.md
 
 # 吉里吉里Z

@@ -18,7 +18,7 @@
 ```
 * ndk-build clean
 * ndk-build -j8 (or ndk-build NDK_DEBUG=1 -j8)
-* Get libkrkrz.so under android_adt/libs/arm64-v8a/libkrkrz.so
+* Get libkrkrz.so under android_adt/libs/armeabi-v7a/libkrkrz.so
 * Use Android ADT to load android_adt/.project
 * Compile the apk file and install it to the Android device, **Now only support armeabi-v7a, for most ARM32 and ARM64 Android device**   
 

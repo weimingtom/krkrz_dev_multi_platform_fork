@@ -5,6 +5,29 @@
 * https://github.com/krkrz/krkrz/tree/3d89b0f203ceca840f62b2e28ad034dea6df41fa
 * https://github.com/krkrz/krkrz/tree/dev_multi_platform  
 
+## How to build apk with Android ADT under Windows
+* cd android_adt/jni
+* Double click console.bat (modify the path %PATH% points to your Android NDK path in console.bat by yourself)  
+```
+::execute ndk-build
+
+::@set PATH=D:\android-ndk-r9c;%PATH%
+@set PATH=D:\android-ndk-r10e;%PATH%
+@set NDK_MODULE_PATH=%CD%\..\..
+@cmd
+```
+* ndk-build clean
+* ndk-build -j8 (or ndk-build NDK_DEBUG=1 -j8)
+* Get libkrkrz.so under android_adt/libs/arm64-v8a/libkrkrz.so
+* Use Android ADT to load android_adt/.project
+* Compile the apk file and install it to the Android device, **Now only support armeabi-v7a, for most ARM32 and ARM64 Android device**   
+
+## (Not sure if good, only for fun) How to build for Windows by VS2022  
+* You may need to copy nasm 2.10.09 exe files to your path, like C:\Windows\System32   
+see also https://github.com/krkrz/krkrz/blob/master/HowToBulid.txt  
+* (I am not sure if good, just for fun) Open tvpwin32.sln with VS2022  
+https://github.com/weimingtom/krkrz_dev_multi_platform_fork/blob/master/vcproj/tvpwin32.sln  
+
 ## weibo record
 ```
 另外Kirikiri Z官方仓库有个分支dev_multi_platform是做android版的，
